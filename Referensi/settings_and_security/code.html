@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings and Security</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col border-r border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-[#101622]/50">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">candlestick_chart</span>
+<h1 class="text-xl font-bold text-slate-800 dark:text-white">FinTrade</h1>
+</div>
+<div class="flex flex-1 flex-col justify-between">
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<p class="text-sm font-medium">Trade</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined">pie_chart</span>
+<p class="text-sm font-medium">Portfolio</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<p class="text-sm font-medium">Markets</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined">description</span>
+<p class="text-sm font-medium">Reports</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg bg-primary/10 px-3 py-2 text-primary dark:bg-primary/20" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="John Doe's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0y1QWuOgb5lJCcZLwpcC7Glr8x_2z9_PLMgZxjyByVUfTwA4ndkc3mKMRxNGokjwEYgCwOZTlfu1o2kUIi184ku9LhdzaRoGYtxMeirQgN62dU_2LaeYwnlhtqdTcTtxM9LlUPhx_rt01iIz6EVlMXFuor2yatb8TUCDkoy9f00SqDy52XqFh5y-ibSJx-IDKCD2E9njZnDd2Pmu79HIYyeY5iFwr-j54cHbeBJcfpJBuQR0fehY3ChwfLBgUalV6Jh6bVbxkRWU-");'></div>
+<div class="flex flex-col">
+<h2 class="text-slate-800 dark:text-white text-base font-medium leading-normal">John Doe</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">john.doe@email.com</p>
+</div>
+</div>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium">Logout</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto p-8">
+<div class="mx-auto max-w-4xl">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 mb-8">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Settings and Security</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">Manage your profile, security settings, and API keys.</p>
+</div>
+</div>
+<!-- Profile Verification Card -->
+<div class="mb-8 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900/50">
+<!-- SectionHeader -->
+<div class="flex items-center justify-between border-b border-slate-200 pb-4 dark:border-slate-800">
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Profile Verification</h2>
+<span class="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700 dark:bg-green-900/50 dark:text-green-400">Verified</span>
+</div>
+<!-- ProgressBar -->
+<div class="flex flex-col gap-3 pt-6">
+<div class="flex gap-6 justify-between"><p class="text-slate-800 dark:text-white text-base font-medium leading-normal">Verification Progress</p></div>
+<div class="rounded-full bg-slate-200 dark:bg-slate-700"><div class="h-2 rounded-full bg-primary" style="width: 100%;"></div></div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Your profile is fully verified.</p>
+</div>
+</div>
+<!-- Security Card -->
+<div class="mb-8 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900/50">
+<!-- SectionHeader -->
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] border-b border-slate-200 pb-4 dark:border-slate-800">Security</h2>
+<div class="divide-y divide-slate-200 dark:divide-slate-800">
+<div class="flex items-center justify-between py-6">
+<div>
+<h3 class="font-medium text-slate-800 dark:text-white">Two-Factor Authentication (2FA)</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Google Authenticator</p>
+</div>
+<label class="relative inline-flex cursor-pointer items-center">
+<input checked="" class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-slate-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-slate-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:border-slate-600 dark:bg-slate-700"></div>
+</label>
+</div>
+<div class="flex items-center justify-between py-6">
+<div>
+<h3 class="font-medium text-slate-800 dark:text-white">Whitelisted IP Addresses</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Restrict account access to specific IP addresses.</p>
+</div>
+<label class="relative inline-flex cursor-pointer items-center">
+<input class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-slate-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-slate-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:border-slate-600 dark:bg-slate-700"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- API Management Card -->
+<div class="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900/50">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4 dark:border-slate-800">
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">API Management</h2>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90">
+<span class="material-symbols-outlined text-base">add</span>
+                            Generate New API Key
+                        </button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-mx-6 -my-2 overflow-x-auto">
+<div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+<table class="min-w-full divide-y divide-slate-200 dark:divide-slate-800">
+<thead>
+<tr>
+<th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 dark:text-white sm:pl-0" scope="col">Label</th>
+<th class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900 dark:text-white" scope="col">API Key</th>
+<th class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900 dark:text-white" scope="col">Permissions</th>
+<th class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900 dark:text-white" scope="col">Created</th>
+<th class="relative py-3.5 pl-3 pr-4 sm:pr-0" scope="col"><span class="sr-only">Actions</span></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+<tr>
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 dark:text-white sm:pl-0">Primary Trading Bot</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-slate-500 dark:text-slate-400 font-mono">sk_...a1b2</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-slate-500 dark:text-slate-400">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5"><input checked="" class="h-4 w-4 rounded border-slate-300 bg-slate-100 text-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-700" disabled="" type="checkbox"/><span class="text-xs">Read</span></div>
+<div class="flex items-center gap-1.5"><input checked="" class="h-4 w-4 rounded border-slate-300 bg-slate-100 text-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-700" disabled="" type="checkbox"/><span class="text-xs">Trade</span></div>
+<div class="flex items-center gap-1.5"><input class="h-4 w-4 rounded border-slate-300 bg-slate-100 text-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-700" disabled="" type="checkbox"/><span class="text-xs">Withdraw</span></div>
+</div>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-slate-500 dark:text-slate-400">Jan 15, 2024</td>
+<td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+<button class="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300">Delete</button>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 dark:text-white sm:pl-0">Portfolio Tracker</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-slate-500 dark:text-slate-400 font-mono">pk_...c3d4</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-slate-500 dark:text-slate-400">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5"><input checked="" class="h-4 w-4 rounded border-slate-300 bg-slate-100 text-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-700" disabled="" type="checkbox"/><span class="text-xs">Read</span></div>
+<div class="flex items-center gap-1.5"><input class="h-4 w-4 rounded border-slate-300 bg-slate-100 text-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-700" disabled="" type="checkbox"/><span class="text-xs">Trade</span></div>
+<div class="flex items-center gap-1.5"><input class="h-4 w-4 rounded border-slate-300 bg-slate-100 text-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-700" disabled="" type="checkbox"/><span class="text-xs">Withdraw</span></div>
+</div>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-slate-500 dark:text-slate-400">Dec 01, 2023</td>
+<td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+<button class="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300">Delete</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
