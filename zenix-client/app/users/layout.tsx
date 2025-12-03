@@ -6,9 +6,11 @@ export default function UsersLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex min-h-screen w-full">
+    <div className="flex min-h-screen">
       <Sidebar />
-      {children}
+      <div className="flex-1 overflow-y-auto w-full px-2 md:px-4">
+        {children}
+      </div>
     </div>
   );
 }

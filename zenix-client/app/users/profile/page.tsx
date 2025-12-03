@@ -5,9 +5,9 @@ import { ApiManagementCard } from '@/components/users/profile/ApiManagementCard'
 
 export default function ProfilePage() {
   return (
-    <main className="flex-1 overflow-y-auto my-8">
-      <div className="mx-auto max-w-4xl">
-        <div className="flex flex-wrap justify-between gap-3 mb-8">
+    <div className="py-4 md:py-6">
+      <div className="mx-auto max-w-6xl">
+        <div className="flex flex-wrap justify-between gap-3 mb-6">
           <div className="flex min-w-72 flex-col gap-3">
             <p className="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">
               Profile
@@ -18,7 +18,7 @@ export default function ProfilePage() {
         <SecurityCard />
         <ApiManagementCard />
       </div>
-    </main>
+    </div>
   );
 }
 
