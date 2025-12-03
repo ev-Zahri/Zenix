@@ -12,9 +12,9 @@ export default function DashboardPage() {
       <div className="flex flex-1 overflow-hidden">
         <Watchlist />
         {/* Main Content Area */}
-        <main className="flex-1 flex flex-col p-4 gap-4 overflow-hidden">
-          {/* <ChartArea /> */}
-          <OpenPositions />
+        <main className="flex-1 flex flex-col p-4 gap-4 overflow-hidden min-h-0">
+          <ChartArea />
+          {/* <OpenPositions /> */}
         </main>
         <OrderEntry />
       </div>

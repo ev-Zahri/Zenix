@@ -51,7 +51,7 @@ const positions: Position[] = [
 
 export const OpenPositions = () => {
   return (
-    <div className="h-1/3 bg-panel-dark rounded-xl flex flex-col p-4 overflow-hidden">
+    <div className="flex-1 min-h-0 bg-panel-dark rounded-xl flex flex-col p-4 overflow-hidden">
       <div className="flex items-center justify-between pb-3 border-b border-background-dark">
         <h3 className="text-white text-lg font-bold leading-tight tracking-[-0.015em]">
           Open Positions
