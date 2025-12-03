@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { useLogOut } from '@/hooks/auth';
+import Image from 'next/image';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: 'dashboard' },
@@ -21,9 +22,22 @@ export const Sidebar = () => {
 
   return (
     <aside className="flex w-64 flex-col border-r border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-background-dark/50">
-      <div className="flex items-center gap-3 mb-8">
-        <span className="material-symbols-outlined text-primary text-3xl">candlestick_chart</span>
-        <h1 className="text-xl font-bold text-slate-800 dark:text-white">FinTrade</h1>
+      <div className="flex items-center m-3">
+        <Image 
+          src="/icons/logo-dark.png" 
+          alt="Zenix" 
+          width={32} 
+          height={32} 
+          className="mr-2" 
+        />
+        {/* <Image 
+          src="/icons/logo-light.png" 
+          alt="Zenix" 
+          width={32} 
+          height={32} 
+          className="mr-2 hidden dark:block" 
+        /> */}
+        <span className="text-xl font-bold text-slate-800 dark:text-white text-center">Zenix</span>
       </div>
       <div className="flex flex-1 flex-col justify-between">
         <div className="flex flex-col gap-2">

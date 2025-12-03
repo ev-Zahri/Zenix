@@ -105,14 +105,14 @@ export const Header = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56 bg-panel-dark border-background-dark">
             <DropdownMenuItem
-              onClick={() => router.push('/profile')}
+              onClick={() => router.push('/users/profile')}
               className="text-white hover:bg-background-dark cursor-pointer"
             >
               <span className="material-symbols-outlined text-lg mr-2">person</span>
               Profile
             </DropdownMenuItem>
             <DropdownMenuItem
-              onClick={() => router.push('/settings')}
+              onClick={() => router.push('/users/setting')}
               className="text-white hover:bg-background-dark cursor-pointer"
             >
               <span className="material-symbols-outlined text-lg mr-2">settings</span>
