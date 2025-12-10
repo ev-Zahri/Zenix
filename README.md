@@ -20,7 +20,7 @@
 
 ## 🚀 About The Project
 
-This project was built to simulate the experience of a professional Forex trader. Unlike typical retail apps, **VeloxTrade** focuses on data density, low-latency updates, and precision.
+This project was built to simulate the experience of a professional Forex trader. Unlike typical retail apps, **Zenix** focuses on data density, low-latency updates, and precision.
 
 The goal of this project is to showcase advanced full-stack capabilities, specifically handling **WebSocket streams** for real-time price updates and managing **high-concurrency state** on the frontend without performance degradation.
 
