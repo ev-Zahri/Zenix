@@ -2,6 +2,7 @@
 import { ProfileVerificationCard } from '@/components/users/profile/ProfileVerificationCard';
 import { SecurityCard } from '@/components/users/profile/SecurityCard';
 import { ApiManagementCard } from '@/components/users/profile/ApiManagementCard';
+import { ProfileInformation } from '@/components/users/profile/ProfileInformation';
 
 export default function ProfilePage() {
   return (
@@ -15,6 +16,7 @@ export default function ProfilePage() {
           </div>
         </div>
         <ProfileVerificationCard />
+        <ProfileInformation />
         <SecurityCard />
         <ApiManagementCard />
       </div>

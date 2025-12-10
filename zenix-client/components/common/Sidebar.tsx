@@ -9,11 +9,11 @@ import Image from 'next/image';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: 'dashboard' },
-  { name: 'Trade', href: '/trade', icon: 'swap_horiz' },
-  { name: 'Portfolio', href: '/portfolio', icon: 'pie_chart' },
-  { name: 'Markets', href: '/markets', icon: 'bar_chart' },
-  { name: 'Reports', href: '/reports', icon: 'description' },
-  { name: 'Settings', href: '/users/setting', icon: 'settings' },
+  { name: 'Trade', href: '/users/trade', icon: 'swap_horiz' },
+  { name: 'Portfolio', href: '/users/portfolio', icon: 'pie_chart' },
+  { name: 'Profile', href: '/users/profile', icon: 'person' },
+  { name: 'Reports', href: '/users/reports', icon: 'description' },
+  { name: 'Settings and Security', href: '/users/setting', icon: 'settings' },
 ];
 
 export const Sidebar = () => {
