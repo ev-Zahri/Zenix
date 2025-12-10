@@ -29,8 +29,8 @@ export const ProfileVerificationCard = () => {
     },
     {
       id: 3,
-      title: 'Verifikasi Berhasil',
-      description: 'Dokumen telah diverifikasi',
+      title: 'Verifikasi Gagal',
+      description: 'Dokumen gagal terverifikasi',
       completed: false,
       current: false,
     },
