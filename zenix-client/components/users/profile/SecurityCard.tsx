@@ -138,7 +138,8 @@ export const SecurityCard = () => {
                 </div>
                 <Button 
                   onClick={handleSavePin}
-                  className="bg-primary hover:bg-primary/90 cursor-pointer mt-2"
+                  variant="outline" 
+                  className="bg-primary hover:bg-primary/90 cursor-pointer mt-2 dark:bg-primary-500 dark:hover:bg-primary-500/90"
                 >
                   Simpan
                 </Button>
@@ -171,17 +172,9 @@ export const SecurityCard = () => {
               </div>
             ) : null}
           </div>
-          { !devConToggle ? (
-            <label className="relative inline-flex cursor-pointer">
-              <input
-                checked={devConToggle}
-                onChange={(e) => setDevConToggle(e.target.checked)}
-                className="peer sr-only"
-                type="checkbox"
-              />
-              <div className="peer h-6 w-11 rounded-full bg-slate-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-slate-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:border-slate-600 dark:bg-slate-700"></div>
-            </label>
-          ) : null}
+          <Button variant="outline" className="bg-primary hover:bg-primary/90 cursor-pointer mt-2 dark:bg-primary-500 dark:hover:bg-primary-500/90" onClick={() => setDevConCount(0)}>
+            Logout dari Semua Device
+          </Button>
         </div>
       </div>
     </div>
