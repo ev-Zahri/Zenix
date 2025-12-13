@@ -8,6 +8,7 @@
 
 import Orders from '@/types/orders';
 import Transaction from '@/types/transaction';
+import { mockOpenOrders } from '@/lib/mock';
 
 interface OpenPositionsCardProps {
     userId: string;
@@ -16,5 +17,6 @@ interface OpenPositionsCardProps {
 }
 
 export default function OpenPositionsCard({ userId, orders, transaction }: OpenPositionsCardProps) {
-    
+    const openOrders = mockOpenOrders;
+    const totalFloatingPnL = openOrders.reduce((total, order) => total + order.gainerPnl, 0);
 }

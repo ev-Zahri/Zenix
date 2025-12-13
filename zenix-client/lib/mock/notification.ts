@@ -1,0 +1,61 @@
+import Notification from '@/types/notification';
+
+export const mockNotifications: Notification[] = [
+  {
+    id: 'notif-001',
+    userId: 'user-001',
+    title: 'Deposit Berhasil',
+    message: 'Deposit sebesar $1,000 telah berhasil dikreditkan ke akun trading Anda.',
+    isRead: false,
+    type: 'SUCCESS',
+    createdAt: '2024-12-13T08:00:00Z',
+    updatedAt: '2024-12-13T08:00:00Z',
+    deletedAt: '',
+  },
+  {
+    id: 'notif-002',
+    userId: 'user-001',
+    title: 'Margin Warning',
+    message: 'Margin level Anda dibawah 50%. Segera tambah dana atau tutup posisi.',
+    isRead: false,
+    type: 'WARNING',
+    createdAt: '2024-12-12T15:30:00Z',
+    updatedAt: '2024-12-12T15:30:00Z',
+    deletedAt: '',
+  },
+  {
+    id: 'notif-003',
+    userId: 'user-001',
+    title: 'Take Profit Tercapai',
+    message: 'Order BUY BTCUSDT telah ditutup karena mencapai target take profit.',
+    isRead: true,
+    type: 'INFO',
+    createdAt: '2024-12-11T10:45:00Z',
+    updatedAt: '2024-12-11T12:00:00Z',
+    deletedAt: '',
+  },
+  {
+    id: 'notif-004',
+    userId: 'user-001',
+    title: 'Stop Loss Triggered',
+    message: 'Order SELL EURUSD telah ditutup karena mencapai stop loss.',
+    isRead: true,
+    type: 'ERROR',
+    createdAt: '2024-12-10T09:15:00Z',
+    updatedAt: '2024-12-10T09:20:00Z',
+    deletedAt: '',
+  },
+  {
+    id: 'notif-005',
+    userId: 'user-001',
+    title: 'Verifikasi KYC Berhasil',
+    message: 'Dokumen KYC Anda telah diverifikasi. Anda sekarang dapat melakukan penarikan.',
+    isRead: true,
+    type: 'SUCCESS',
+    createdAt: '2024-12-09T14:00:00Z',
+    updatedAt: '2024-12-09T14:05:00Z',
+    deletedAt: '',
+  },
+];
+
+export default mockNotifications;
