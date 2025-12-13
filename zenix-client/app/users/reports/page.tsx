@@ -4,13 +4,15 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectGroup, SelectI
 import { useState } from "react";
 import { PerformanceOverviewCard } from "@/components/users/reports/PerformanceOverviewCard";
 import { TradingStatisticsCard } from "@/components/users/reports/TradingStatisticsCard";
+import { FinancialReportsCard } from "@/components/users/reports/FinancialReportsCard";
+import { ExportReportsCard } from "@/components/users/reports/ExportReportsCard";
 
 export default function ReportsPage() {
     const [account, setAccount] = useState(['All Accounts', 'Account 1', 'Account 2', 'Account 3']);
     const [selectedAccount, setSelectedAccount] = useState('All Accounts');
 
     const [interval, setInterval] = useState(['1', '7', '30', '90', '180', '360']);
-    const [selectedInterval, setSelectedInterval] = useState('1');
+    const [selectedInterval, setSelectedInterval] = useState('30');
 
     return (
         <div className="py-4 md:py-6">
@@ -53,6 +55,8 @@ export default function ReportsPage() {
                 <div className="flex flex-col mt-3">
                     <PerformanceOverviewCard idAccount={selectedAccount} interval={selectedInterval} />
                     <TradingStatisticsCard idAccount={selectedAccount} interval={selectedInterval} />
+                    <FinancialReportsCard idAccount={selectedAccount} interval={selectedInterval} />
+                    <ExportReportsCard idAccount={selectedAccount} interval={selectedInterval} />
                 </div>
             </div>
         </div>

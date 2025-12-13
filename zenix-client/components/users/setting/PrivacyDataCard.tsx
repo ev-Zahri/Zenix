@@ -20,24 +20,24 @@ export const PrivacyDataCard = () => {
                     { /* Data Export */}
                     <div className="flex items-center justify-between">
                         <span className="font-medium text-slate-800 dark:text-white">Export Log Transaction (csv)</span>
-                        <Button variant="outline">Export</Button>
+                        <Button variant="outline" className="bg-primary hover:bg-primary/90 cursor-pointer mt-2 dark:bg-primary-500 dark:hover:bg-primary-500/90">Export</Button>
                     </div>
                     { /* Account Deletion */}
                     <div className="flex items-center justify-between">
                         <span className="font-medium text-slate-800 dark:text-white">Account Deletion</span>
-                        <Button variant="outline">Delete</Button>
+                        <Button variant="outline" className="bg-primary hover:bg-primary/90 cursor-pointer mt-2 dark:bg-primary-500 dark:hover:bg-primary-500/90">Delete</Button>
                     </div>
                 </div>
                 <div className="flex flex-col gap-4 w-1/3">
                     { /* Privacy Policy */}
                     <div className="flex items-center justify-between">
                         <span className="font-medium text-slate-800 dark:text-white">Privacy Policy</span>
-                        <Button variant="outline">View</Button>
+                        <Button variant="outline" className="bg-primary hover:bg-primary/90 cursor-pointer mt-2 dark:bg-primary-500 dark:hover:bg-primary-500/90">View</Button>
                     </div>
                     { /* Terms of Service */}
                     <div className="flex items-center justify-between">
                         <span className="font-medium text-slate-800 dark:text-white">Terms of Service</span>
-                        <Button variant="outline">View</Button>
+                        <Button variant="outline" className="bg-primary hover:bg-primary/90 cursor-pointer mt-2 dark:bg-primary-500 dark:hover:bg-primary-500/90">View</Button>
                     </div>
                 </div>
                 <div className="flex flex-col gap-4 w-1/3">
@@ -45,14 +45,14 @@ export const PrivacyDataCard = () => {
                     { !referalCode && (
                         <div className="flex items-center justify-between">
                             <span className="font-medium text-slate-800 dark:text-white">Generate Referal Toggle</span>
-                                <Button onClick={generateReferalCode}>Generate</Button>
+                                <Button onClick={generateReferalCode} variant="outline" className="bg-primary hover:bg-primary/90 cursor-pointer mt-2 dark:bg-primary-500 dark:hover:bg-primary-500/90">Generate</Button>
                         </div>
                     )}
                     { /* Referal Code */}
                     { referalCode && (
                         <div className="flex items-center justify-between">
                             <span className="font-medium text-slate-800 dark:text-white">Referal Code: {referalCode}</span>
-                            <Button variant="outline">Copy</Button>
+                            <Button variant="outline" className="bg-primary hover:bg-primary/90 cursor-pointer mt-2 dark:bg-primary-500 dark:hover:bg-primary-500/90">Copy</Button>
                         </div>
                     ) }
                 </div>

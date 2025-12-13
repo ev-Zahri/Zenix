@@ -83,7 +83,7 @@ export const TradingStatisticsCard = ({ idAccount, interval }: TradingStatistics
                             : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                     }`}
                 >
-                    Daily Performance
+                    Performance
                 </button>
                 <button
                     onClick={() => setActiveTab('symbol')}
@@ -115,7 +115,7 @@ export const TradingStatisticsCard = ({ idAccount, interval }: TradingStatistics
                         {/* Daily PnL Chart */}
                         <div>
                             <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
-                                Daily Profit/Loss
+                                Profit/Loss
                             </h3>
                             <ResponsiveContainer width="100%" height={300}>
                                 <BarChart data={dailyPnL}>
@@ -153,10 +153,10 @@ export const TradingStatisticsCard = ({ idAccount, interval }: TradingStatistics
                             </ResponsiveContainer>
                         </div>
                         
-                        {/* Equity Curve */}
+                        {/* Volume Curve */}
                         <div>
                             <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
-                                Equity Curve
+                                Volume Curve
                             </h3>
                             <ResponsiveContainer width="100%" height={300}>
                                 <LineChart data={equityCurve}>

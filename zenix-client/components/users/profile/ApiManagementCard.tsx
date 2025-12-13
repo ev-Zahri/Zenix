@@ -56,7 +56,7 @@ export const ApiManagementCard = () => {
         <h2 className="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">
           API Management
         </h2>
-        <Button onClick={handleGenerateNew} className="bg-primary hover:bg-primary/90">
+        <Button onClick={handleGenerateNew} variant="outline" className="bg-primary hover:bg-primary/90 cursor-pointer mt-2 dark:bg-primary-500 dark:hover:bg-primary-500/90">
           <span className="material-symbols-outlined text-base">add</span>
           Generate New API Key
         </Button>
@@ -140,12 +140,12 @@ export const ApiManagementCard = () => {
                       {apiKey.created}
                     </td>
                     <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                      <button
+                      <Button
                         onClick={() => handleDelete(apiKey.id)}
-                        className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
+                        variant="outline" className="bg-primary hover:bg-primary/90 cursor-pointer mt-2 dark:bg-primary-500 dark:hover:bg-primary-500/90"
                       >
                         Delete
-                      </button>
+                      </Button>
                     </td>
                   </tr>
                 ))}
